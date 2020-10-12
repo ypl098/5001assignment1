@@ -1,0 +1,14 @@
+#!python3
+import requests
+import re
+import os
+f=open(r"blocklist.xml")
+pat='(<.*?blockID="i.*?\d".*?>)\n'
+pat1='(<.*?blockID="g.*?\d">)\n'
+ilt=re.compile(pat).findall(str(f.read()))
+f=open(r"blocklist.xml")
+ilt1=re.compile(pat1).findall(str(f.read()))
+for i in range(len(ilt)):
+        print('\n',ilt[i])
+for j in range(len(ilt1)):
+        print('\n',ilt1[j])
