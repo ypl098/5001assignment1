@@ -1,0 +1,19 @@
+#!/bin/bash
+for((i=1;i<=100;i++))
+do
+        if [ ! -d DDM$i ]
+        then
+                mkdir DDM$i
+                cd DDM$i
+                touch time_till_now.txt
+                cat>>./time_till_now.txt<<EOF
+                the time of this day is :
+                $(date)
+                nanoseconds since 1970-01-01 00:00:00 UTC:
+                $(date +%s)
+
+EOF
+cd ..
+        fi
+done
+                                                                                                           ~                                                                                                                       ~                                                                                                                       ~        
