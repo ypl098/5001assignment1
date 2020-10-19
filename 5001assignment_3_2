@@ -3,7 +3,7 @@ import requests
 import re
 import os
 f=open(r"blocklist.xml")
-pat='(<.*?id="\w.*?@\w.*?.com">)\n'
+pat='(<.*?id="\w.*?@\w.*?\..*?">)\n'
 ilt=re.compile(pat).findall(str(f.read()))
 for i in range(len(ilt)):
         print('\n',ilt[i])
